@@ -1,0 +1,21 @@
+body {background-image: url(roomfloor2.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+.dogpic {
+    position: fixed;
+    bottom: 0%;
+left: 100px;
+    width: 34%;
+    height: auto;
+}
+
+.ball {
+    position: fixed;
+    top: 85%;
+    left: 500px;
+    width: 55px;
+    height: auto;
+}
