@@ -1,5 +1,11 @@
-html {
+body {
+  opacity: 1;
+  transition: opacity 1.5s ease;
   background-color: black;
+}
+
+.fade-out {
+  opacity: 0;
 }
 
 .container {
@@ -25,6 +31,12 @@ html {
   text-align: center;
 }
 
+.arrow{
+  position: absolute;
+  box-shadow: 0 5px black;
+  padding: 10px;
+}
+
 button {
   background-color: rgb(140, 106, 106);
   font-size: 10px;
@@ -40,4 +52,7 @@ button:hover {
   background-color: white;
 }
 
+.noarrowtransition {
+  display: none;
+}
 

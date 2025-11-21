@@ -4,3 +4,24 @@ background-size: cover;
 background-attachment: fixed;
 }
 
+p {text-align: center;
+font-size: 40px;
+color: whitesmoke;
+}
+
+.buttons {position: center;
+    align-content:center;
+    text-align: center;
+font-size: 30px;
+font-family: 'Georgia'
+}
+
+#yes {background-color: lightblue;
+font-size: 30px;
+font-family: 'Georgia'
+}
+
+#no {background-color: lightblue;
+font-size: 30px;
+font-family: 'Georgia'
+}
