@@ -24,3 +24,13 @@ $(window).on("pageshow", function() {
         }, 1500);
         });
 });
+
+var audio = document.getElementById('background-audio');
+
+audio.volume = 0.3;
+audio.loop = true;
+audio.play();
+
+document.addEventListener('click', function () {
+    audio.muted = false;
+}, { once: true });

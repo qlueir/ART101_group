@@ -3,3 +3,29 @@ background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
 }
+
+#dialogue-box {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    padding: 20px;
+    background: black;
+    color: white;
+    font-size: 30px;
+    min-height: 55px;
+    cursor: pointer; 
+}
+
+#exit-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
