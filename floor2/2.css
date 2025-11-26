@@ -5,18 +5,18 @@ background-attachment: fixed;
 }
 
 .dogpic {
-      position: fixed;
+      position: absolute;
     top: 55%;
-    left: 200px;
-    width: 300px;
+    left: 17%;
+    width: 35%;
     height: auto;
 }
 
 .ball {
-    position: fixed;
+    position: absolute;
     top: 85%;
-    left: 500px;
-    width: 55px;
+    left: 55%;
+    width: 7%;
     height: auto;
 }
 .room2 {
@@ -77,3 +77,7 @@ p {
     transform: scale(1);
 }
 
+.container {
+display: flex;
+flex-wrap: nowrap;
+}
