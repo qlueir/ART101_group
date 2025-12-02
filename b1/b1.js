@@ -44,7 +44,7 @@ var dialogues = [
     "Are you some sort of parking lot fanatic or something?",
     "I mean- no judgement!",
     "Just seems pretty lonely.",
-    "How about you go back and visit ol’ Lobby again?",
+    "How about you go back and visit ol’ Lobbie again?",
     "He doesn’t say much, but he enjoys the company!",
     "(At least, that's what I tell myself)",
     "You deserve better than a parking lot!",
