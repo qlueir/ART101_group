@@ -52,7 +52,7 @@ button:hover {
   background-color: white;
 }
 
-.noarrowtransition {
+.noarrowtransition, .testfloor1, .testfloor2{
   display: none;
 }
 

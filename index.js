@@ -5,7 +5,7 @@ let elevator = new Audio ('ADD SOME ELEVATOR MUSIC.mp3')
 elevator.play('ADD SOME ELEVATOR MUSIC.mp3')
 elevator.loop = true
 
-
+//ding transition
 $(window).on("pageshow", function() {
         $("body").removeClass("fade-out");
     });
