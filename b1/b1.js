@@ -1,4 +1,4 @@
-let audio = document.getElementById('background-audio');
+let audio = document.getElementById('background-audio-parking');
 audio.loop = true;
 audio.muted = false;
 audio.play();
@@ -75,7 +75,7 @@ dialogueBox.addEventListener("click", nextLine);
 
 // tutorial used https://www.youtube.com/watch?v=MiTJnYHX3iA and https://www.w3schools.com/howto/howto_js_typewriter.asp
 
-var exitButton = document.getElementById("exit-button");
+var exitButton = document.getElementById("exit-button-parking");
 
 exitButton.addEventListener("click", function() {
     window.location.href = "../../index.html";

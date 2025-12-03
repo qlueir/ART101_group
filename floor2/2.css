@@ -1,4 +1,4 @@
-body {background-image: url(roomfloor2.jpg);
+.body-floor2 {background-image: url(roomfloor2.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
@@ -34,7 +34,7 @@ p {
     color: black;
 }
 
-.buttons {
+.buttons-floor2 {
     position: center;
     align-content:center;
     text-align: center;
@@ -59,7 +59,7 @@ p {
 
 }
 
-#message {
+#message-floor2 {
     text-align: center;
     font-size: 35px;
     color: darkblue;
