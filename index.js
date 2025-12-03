@@ -33,16 +33,17 @@ $(document).ready(function() {
     });
 
 
-    //testing div page show + hide
+    //=====================div page show + hide===================
+    //groundfloor button --> floor 1
     $(".testbutton1").click(function() {
         $(".testground").hide();
         $(".testfloor1").show();
     });
 
-    //groundfloor button --> floor 1
+    //groundfloor button --> floor 2
     $(".testbutton2").click(function() {
         $(".testground").hide();
-        $(".testfloor1").show();
+        $(".testfloor2").show();
     });
 
     //back to ground floor
