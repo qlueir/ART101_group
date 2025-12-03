@@ -1,7 +1,20 @@
-body {
+/* body {
 background-image: url(Floor1Aquarium.gif); 
 background-repeat: repeat-y; 
 background-size: cover;  background-attachment: fixed;
+} */
+
+Body {background-color:black;} 
+
+.container {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+.container img {
+  height: auto;
+  width: 100%;
+  max-width: 700px;
 }
 
 p {text-align: center;
