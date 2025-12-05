@@ -1,6 +1,5 @@
 let audio = document.getElementById('OceanWaves');
 audio.loop = true;
-audio.muted = true;
 audio.muted = false;
 audio.play();
 audio.volume = 0.3;

@@ -30,10 +30,19 @@ $(document).ready(function() {
              window.location.href = url;
             }, 1500);
         });
+
+    //===================TITLE=========================
+    let closeSound = document.getElementById("close-sound");
+
+    //click start button, sound, hide title and reveal container
+    $(".start-button").on("click", function () {
+
+        $(".title").hide();
+        $(".container").show();
+
     });
 
-
-    //=====================div page show + hide===================
+    //=====================moving from html to html===================
     //groundfloor button --> floor 1
     $(".testbutton1").click(function() {
         $(".testground").hide();
@@ -48,14 +57,23 @@ $(document).ready(function() {
 
     //back to ground floor
     $(".backtoground").click(function() {
-        $(".testfloor1").hide();
-        $(".testfloor2").hide();
-        $(".testground").show();
-    });
+        $(".title").show();
+        $(".testfloor1").hide();//find out how to current floor on page hide
 
+        $(".container").show();
+        
+        //door close sfx
+        closeSound.currentTime = 0;
+        closeSound.volume = 1;
+
+        closeSound.play().catch(function (err) {
+            console.log("AUDIO ERROR:", err);
+        });
+
+    });
 
 document.addEventListener('click', function () {
     audio.muted = false;
 }, { once: true });
 
-
+});
