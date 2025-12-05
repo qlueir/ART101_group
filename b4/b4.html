@@ -12,23 +12,66 @@
    <script src="b4.js" defer></script>
 </head>
 
-<body>
+
+<button id="exitpurgatory">Exit</button>
+
 
    <img id="mirror" src="images/mirror.png">
    <div id="image-container"></div>
    <img id="arrow" src="images/arrow.png">
 
+ <div id="dicetext">
+
+ </div>
+
+ <div id="text"> 
+
+   Roll the Dice to Determine Your Fate
+   
+ </div> 
+
    <audio id="music" src="images/music.mp3" autoplay loop muted></audio>
 
-   <!-- FIXED DICE STRUCTURE -->
-   <div id="cube" class="dice">
-      <div class="face one">Rebirth as a New Human</div>
-      <div class="face two">Relive the Same Life</div>
-      <div class="face three">Heaven</div>
-      <div class="face four">Hell</div>
-      <div class="face five">Purgatory</div>
-      <div class="face six">You're born a rock</div>
    </div>
+
+      <div class="dice" id="cube" type="button">
+      <ol class="die-list even-roll" data-roll="1" id="die-1">
+        <li class="die-item" data-side="1">
+          <span class="dot"></span>
+        </li>
+        <li class="die-item" data-side="2">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </li>
+        <li class="die-item" data-side="3">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </li>
+        <li class="die-item" data-side="4">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </li>
+        <li class="die-item" data-side="5">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </li>
+        <li class="die-item" data-side="6">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </li>
+      </ol>
+    </div>
+
 
 </body>
 </html>
