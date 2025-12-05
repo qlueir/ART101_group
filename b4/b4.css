@@ -1,273 +1,137 @@
-body {background-image: url(images/b4\ pt1.jpg);
-  width: 100vw;  
-  height: 100vh;  
 
-  object-fit: cover;  
-  z-index: 999;      
-}
-
-#mirror  {width: 1300px; position: absolute; left: 10px;  z-index: 10;}
-
-#arrow {
-  width: 1300px;             
-  position: absolute;
-  top: 200px;               
-  left: 0px;             
-
-  animation: moveArrow 2s ease-in-out infinite alternate;
-}
-
-#dicetext {
-
- position: absolute;
-    top: 100px;
-    left: 650px;
-    padding: 20px 40px;
-    font-size: 30px;
-    background-color: rgb(52, 22, 22);
-    color: rgb(255, 255, 255);
-    border: none;
-    cursor: pointer;
-        display: none
-
-}
-
-#text {
-
-   position: absolute;
-    top: 0px;
-    left: 500px;
-    padding: 20px 40px;
-    font-size: 50px;
-    font-family:fantasy ;
-    color: rgb(255, 255, 255);
-    border: none;
-    cursor: pointer;
-
-}
-
-#exitpurgatory {
-    position: absolute;
-    top: 10px;
-    right: 40px;
-    padding: 20px 40px;
-    font-size: 30px;
-    background-color: rgb(52, 22, 22);
-    color: rgb(255, 255, 255);
-    border: none;
-    cursor: pointer;
-}
-
-#image-container img {
-
-  width: 100vw;   
-  height: 100vh; 
-
-  object-fit: cover; 
-  z-index: 999;       
-}
-
-#cube {
-  position: absolute;
-  bottom: 80px;               
-  left: 700px; 
-    display: none;
-}
-
-
-@keyframes moveArrow {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform:
-   translateY(-20px);  
-  }
-}
-* {
+body {
+  background: url("images/b4 pt1.jpg") no-repeat center center fixed;
+  background-size: cover;
   margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-}
-html {
+  height: 100vh;
+  width: 100vw;
   font-family: system-ui, sans-serif;
 }
 
-.dice {
-  align-items: center;
-  display: grid;
-
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-  grid-template-rows: auto;
-  justify-items: center;
-  padding: 2rem;
-  perspective: 500px;
-}
-.die-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  height: 6rem;
-  list-style-type: none;
-  transform-style: preserve-3d;
-  width: 6rem;
-}
-.even-roll {
-  transition: transform 1.2s ease-out;
-}
-.odd-roll {
-  transition: transform 1.05s ease-out;
-}
-.die-item {
-  background-color: #fefefe;
-  box-shadow: inset -0.35rem 0.35rem 0.75rem rgba(0, 0, 0, 0.3),
-    inset 0.5rem -0.25rem 0.5rem rgba(0, 0, 0, 0.15);
-  display: grid;
-  grid-column: 1;
-  grid-row: 1;
-  grid-template-areas:
-    "one two three"
-    "four five six"
-    "seven eight nine";
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  height: 100%;
-  padding: 1rem;
+.center-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* horizontal center */
+  justify-content: center; /* vertical center */
   width: 100%;
-}
-.dot {
-  align-self: center;
-  background-color: #676767;
-  border-radius: 50%;
-  box-shadow: inset -0.15rem 0.15rem 0.25rem rgba(0, 0, 0, 0.5);
-  display: block;
-  height: 1.25rem;
-  justify-self: center;
-  width: 1.25rem;
+  height: auto;
+  text-align: center;
+  pointer-events: none;
 }
 
-/* Rotation */
-.even-roll[data-roll="1"] {
-  transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
-}
-.even-roll[data-roll="2"] {
-  transform: rotateX(450deg) rotateY(720deg) rotateZ(360deg);
-}
-.even-roll[data-roll="3"] {
-  transform: rotateX(360deg) rotateY(630deg) rotateZ(360deg);
-}
-.even-roll[data-roll="4"] {
-  transform: rotateX(360deg) rotateY(810deg) rotateZ(360deg);
-}
-.even-roll[data-roll="5"] {
-  transform: rotateX(270deg) rotateY(720deg) rotateZ(360deg);
-}
-.even-roll[data-roll="6"] {
-  transform: rotateX(360deg) rotateY(900deg) rotateZ(360deg);
-}
-.odd-roll[data-roll="1"] {
-  transform: rotateX(-360deg) rotateY(-720deg) rotateZ(-360deg);
-}
-.odd-roll[data-roll="2"] {
-  transform: rotateX(-270deg) rotateY(-720deg) rotateZ(-360deg);
-}
-.odd-roll[data-roll="3"] {
-  transform: rotateX(-360deg) rotateY(-810deg) rotateZ(-360deg);
-}
-.odd-roll[data-roll="4"] {
-  transform: rotateX(-360deg) rotateY(-630deg) rotateZ(-360deg);
-}
-.odd-roll[data-roll="5"] {
-  transform: rotateX(-450deg) rotateY(-720deg) rotateZ(-360deg);
-}
-.odd-roll[data-roll="6"] {
-  transform: rotateX(-360deg) rotateY(-900deg) rotateZ(-360deg);
-}
-[data-side="1"] {
-  transform: rotate3d(0, 0, 0, 90deg) translateZ(4rem);
-}
-[data-side="2"] {
-  transform: rotate3d(-1, 0, 0, 90deg) translateZ(4rem);
-}
-[data-side="3"] {
-  transform: rotate3d(0, 1, 0, 90deg) translateZ(4rem);
-}
-[data-side="4"] {
-  transform: rotate3d(0, -1, 0, 90deg) translateZ(4rem);
-}
-[data-side="5"] {
-  transform: rotate3d(1, 0, 0, 90deg) translateZ(4rem);
-}
-[data-side="6"] {
-  transform: rotate3d(1, 0, 0, 180deg) translateZ(4rem);
-}
-[data-side="1"] .dot:nth-of-type(1) {
-  grid-area: five;
-}
-[data-side="2"] .dot:nth-of-type(1) {
-  grid-area: one;
-}
-[data-side="2"] .dot:nth-of-type(2) {
-  grid-area: nine;
-}
-[data-side="3"] .dot:nth-of-type(1) {
-  grid-area: one;
-}
-[data-side="3"] .dot:nth-of-type(2) {
-  grid-area: five;
-}
-[data-side="3"] .dot:nth-of-type(3) {
-  grid-area: nine;
-}
-[data-side="4"] .dot:nth-of-type(1) {
-  grid-area: one;
-}
-[data-side="4"] .dot:nth-of-type(2) {
-  grid-area: three;
-}
-[data-side="4"] .dot:nth-of-type(3) {
-  grid-area: seven;
-}
-[data-side="4"] .dot:nth-of-type(4) {
-  grid-area: nine;
-}
-[data-side="5"] .dot:nth-of-type(1) {
-  grid-area: one;
-}
-[data-side="5"] .dot:nth-of-type(2) {
-  grid-area: three;
-}
-[data-side="5"] .dot:nth-of-type(3) {
-  grid-area: five;
-}
-[data-side="5"] .dot:nth-of-type(4) {
-  grid-area: seven;
-}
-[data-side="5"] .dot:nth-of-type(5) {
-  grid-area: nine;
-}
-[data-side="6"] .dot:nth-of-type(1) {
-  grid-area: one;
-}
-[data-side="6"] .dot:nth-of-type(2) {
-  grid-area: three;
-}
-[data-side="6"] .dot:nth-of-type(3) {
-  grid-area: four;
-}
-[data-side="6"] .dot:nth-of-type(4) {
-  grid-area: six;
-}
-[data-side="6"] .dot:nth-of-type(5) {
-  grid-area: seven;
-}
-[data-side="6"] .dot:nth-of-type(6) {
-  grid-area: nine;
+.center-wrapper * {
+  pointer-events: auto; 
 }
 
-@media (min-width: 900px) {
-  .dice {
-    perspective: 1300px;
-  }
+#mirror {
+  width: 700px;
+  max-width: 80vw;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+#arrow {
+  width: 400px;
+  max-width: 50vw;
+  animation: moveArrow 2s ease-in-out infinite alternate;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+#dicetext {
+  display: none;
+  padding: 20px 40px;
+  font-size: 30px;
+  background-color: rgb(52, 22, 22);
+  color: white;
+  margin-bottom: 40px;
+}
+
+#text {
+  text-align: center;
+  font-size: 50px;
+  font-family:cursive;
+  color: white;
+  margin-top: 20px;       /* spacing from top */
+  margin-bottom: 40px;    /* spacing before mirror */
+}
+
+
+/* Exit button */
+#exitpurgatory {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  padding: 15px 30px;
+  font-size: 24px;
+  background-color: rgb(52, 22, 22);
+  color: white;
+  cursor: pointer;
+}
+
+
+/* --------------------------------
+   REPLACEMENT IMAGE (AFTER MIRROR)
+---------------------------------- */
+#image-container img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+/* --------------------------------
+   DICE STYLE
+---------------------------------- */
+#cube {
+  display: none;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  margin-top: 20px;
+  transition: transform 1s ease-in-out;
+}
+
+/* Faces */
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  backface-visibility: hidden;
+}
+
+/* Face positions */
+.face.one   { transform: rotateY(0deg) translateZ(50px); }
+.face.two   { transform: rotateY(180deg) translateZ(50px); }
+.face.three { transform: rotateY(90deg) translateZ(50px); }
+.face.four  { transform: rotateY(-90deg) translateZ(50px); }
+.face.five  { transform: rotateX(90deg) translateZ(50px); }
+.face.six   { transform: rotateX(-90deg) translateZ(50px); }
+
+/* Show rotations */
+.dice.show-1 { transform: rotateY(0deg); }
+.dice.show-2 { transform: rotateY(-180deg); }
+.dice.show-3 { transform: rotateY(-90deg); }
+.dice.show-4 { transform: rotateY(90deg); }
+.dice.show-5 { transform: rotateX(-90deg); }
+.dice.show-6 { transform: rotateX(90deg); }
+
+
+/* --------------------------------
+   ARROW FLOAT ANIMATION
+---------------------------------- */
+@keyframes moveArrow {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-20px); }
 }
