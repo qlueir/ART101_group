@@ -11,39 +11,44 @@ $(document).ready(function () {
 
     });
 });
-//
-//var roller = getRandomNumber(1, 6);
-function rollDice(roll_value) {
-  const dice = [...document.querySelectorAll(".die-list")];
+$(document).ready(function () {
+    $("#mirror").click(function () {
+        $("#image-container").html("<img width='3000' src='images/b4 pt2.jpg'>");
+        $("#image-container").fadeIn("slow");
+        $("#mirror").fadeOut(400);
+        $("#arrow").fadeOut(400);
 
-  dice.forEach((die) => {
-    toggleClasses(die);
+        let audio = document.getElementById('music');
+        audio.loop = true;
+        audio.muted = false;
+        audio.play();
+    });
 
-    die.dataset.roll = roll_value;
-  });
-}
-function toggleClasses(die) {
-  die.classList.toggle("odd-roll");
-  die.classList.toggle("even-roll");
-}
+    // FIX: valid animate syntax
+    $("#arrow").animate({ top: "11px", bottom: "20px" });
+});
+
+
+// ---- DICE SCRIPT ----
 
 function getRandomNumber(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-//document.getElementById("roll-button").addEventListener("click", rollDice);
-var dice = document.getElementById("cube");
-dice.onclick = function () {
-  var roll_value = getRandomNumber(1, 6);
-  rollDice(roll_value);
-  
+function rollDice(roll_value) {
+    const dice = document.getElementById("cube");
+
+    // Remove old classes
+    dice.classList.remove("show-1", "show-2", "show-3", "show-4", "show-5", "show-6");
+
+    // Add new roll class
+    dice.classList.add("show-" + roll_value);
+}
+
+// CLICK TO ROLL
+document.getElementById("cube").onclick = function () {
+    const roll_value = getRandomNumber(1, 6);
+    rollDice(roll_value);
 };
 
-
-
-$("#arrow").animate ({top: '11px'}); ({bottom: '20px'})
-
-
-
+//im making a dice that will portray words instead of numbers, I originally had code that work, but the dice is not spinning anymore. Here is my js code
