@@ -9,10 +9,12 @@ body {
 }
 
 .container {
+  display: none;
   position: relative;
   width: fit-content;
   margin: 0 auto;
 }
+
 .container img {
   height: auto;
   width: 100%;
@@ -87,15 +89,6 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-body {
-    opacity: 1;
-    transition: opacity 1.5s ease;
-}
-
-body.fade-out {
-    opacity: 0;
 }
 
 /*testing div floor*/
