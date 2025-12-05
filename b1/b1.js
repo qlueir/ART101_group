@@ -1,4 +1,4 @@
-let audio = document.getElementById('background-audio');
+let audio = document.getElementById('background-audio-parking');
 audio.loop = true;
 audio.muted = false;
 audio.play();
@@ -44,7 +44,7 @@ var dialogues = [
     "Are you some sort of parking lot fanatic or something?",
     "I mean- no judgement!",
     "Just seems pretty lonely.",
-    "How about you go back and visit ol’ Lobby again?",
+    "How about you go back and visit ol’ Lobbie again?",
     "He doesn’t say much, but he enjoys the company!",
     "(At least, that's what I tell myself)",
     "You deserve better than a parking lot!",
@@ -75,7 +75,7 @@ dialogueBox.addEventListener("click", nextLine);
 
 // tutorial used https://www.youtube.com/watch?v=MiTJnYHX3iA and https://www.w3schools.com/howto/howto_js_typewriter.asp
 
-var exitButton = document.getElementById("exit-button");
+var exitButton = document.getElementById("exit-button-parking");
 
 exitButton.addEventListener("click", function() {
     window.location.href = "../../index.html";

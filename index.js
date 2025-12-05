@@ -1,36 +1,61 @@
 $(document).ready(function() {
 
-let ding = new Audio ('image/ding.mp3')
-let elevator = new Audio ('ADD SOME ELEVATOR MUSIC.mp3')
-elevator.play('ADD SOME ELEVATOR MUSIC.mp3')
-elevator.loop = true
+    //variables
+    let ding = new Audio ('image/ding.mp3')
+    let elevator = new Audio ('ADD SOME ELEVATOR MUSIC.mp3')
+    var audio = document.getElementById('background-audio');
 
+    //elevator music
+    elevator.play('ADD SOME ELEVATOR MUSIC.mp3')
+    elevator.loop = true
+    audio.volume = 0.3;
+    audio.loop = true;
+    audio.play();
 
-$(window).on("pageshow", function() {
-        $("body").removeClass("fade-out");
+    //ding transition
+    $(window).on("pageshow", function() {
+            $("body").removeClass("fade-out");
+        });
+
+        $(".dingdong").click(function() {
+            ding.play();
+            elevator.pause();
+
+            let url = $(this).data("url");
+            if (!url) return;
+
+            $("body").addClass("fade-out");
+
+            setTimeout(function() {
+             window.location.href = url;
+            }, 1500);
+        });
     });
 
-    $(".dingdong").click(function() {
-        ding.play();
-        elevator.pause();
 
-        let url = $(this).data("url");
-        if (!url) return;
+    //=====================div page show + hide===================
+    //groundfloor button --> floor 1
+    $(".testbutton1").click(function() {
+        $(".testground").hide();
+        $(".testfloor1").show();
+    });
 
-        $("body").addClass("fade-out");
+    //groundfloor button --> floor 2
+    $(".testbutton2").click(function() {
+        $(".testground").hide();
+        $(".testfloor2").show();
+    });
 
-        setTimeout(function() {
-           window.location.href = url;
-        }, 1500);
-        });
-});
+    //back to ground floor
+    $(".backtoground").click(function() {
+        $(".testfloor1").hide();
+        $(".testfloor2").hide();
+        $(".testground").show();
+    });
 
-var audio = document.getElementById('background-audio');
-
-audio.volume = 0.3;
-audio.loop = true;
-audio.play();
 
 document.addEventListener('click', function () {
     audio.muted = false;
 }, { once: true });
+
+
