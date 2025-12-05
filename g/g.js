@@ -1,4 +1,14 @@
 
+// Get references to the button and the text element
+const myButton = document.getElementById('hell');
+const hiddenButton = document.getElementById('hiddenButton');
+
+// Add a click event listener to the button
+hell.addEventListener('click', function() {
+    // Change the display style to make the text visible
+    hiddenButton.style.display = 'block'; 
+});
+
 function makeImage (imageName) {
 $("body").append("<img width=200 src='hell.png'>");
    }
@@ -18,8 +28,11 @@ makeImage ("hell");
  });
 
  $("#trolleyProblem").click(function(){
+    console.log("meow");
+
     $("#trolleyProblem").html ("Wuh oh, looks like you have a dillemma! Will you pull the lever to save the five people but sacrifice one?");
 makeImage2("trolleyProblem");
+console.log("woof");
 
     makeButton2 ("Pull Lever");
    function makeButton2 (lever) {
