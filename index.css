@@ -59,17 +59,18 @@ button:hover {
 }
 
 .page #start-button {
-    display: block;
+    position: relative;
     bottom: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    left: 50%;
+    width: auto;     
     padding: 2%;
     font-size: 16px;
+
     background-color: black;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 8px;
 }
 #start-button:hover {
     background-color: darkred;
