@@ -43,24 +43,22 @@ $(document).ready(function() {
     });
 
     //=====================moving from html to html===================
-    //groundfloor button --> floor 1
+    //elevator button --> floor 1
     $(".testbutton1").click(function() {
         $(".testground").hide();
         $(".testfloor1").show();
     });
 
-    //groundfloor button --> floor 2
+    //elevator button --> floor 2
     $(".testbutton2").click(function() {
         $(".testground").hide();
         $(".testfloor2").show();
     });
 
-    //back to ground floor
-    $(".backtoground").click(function() {
-        $(".title").show();
-        $(".testfloor1").hide();//find out how to current floor on page hide
-
+    //back to elevator
+    $(".backtoelevator").click(function() {
         $(".container").show();
+        $(".title").hide();//find out how to current floor on page hide
         
         //door close sfx
         closeSound.currentTime = 0;
