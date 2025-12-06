@@ -6,24 +6,27 @@ $(document).ready(function() {
     var audio = document.getElementById('background-audio');
 
     //elevator music
-    elevator.play('ADD SOME ELEVATOR MUSIC.mp3')
+
     elevator.loop = true
     audio.volume = 0.3;
     audio.loop = true;
     audio.play();
+    document.addEventListener('click', function () {
+    audio.muted = false;
+    }, { once: true });
 
     //ding transition
     $(window).on("pageshow", function() {
             $("body").removeClass("fade-out");
         });
 
-        $(".dingdong").click(function() {
+        $(".buttons button").click(function() {
             ding.play();
             elevator.pause();
 
             let url = $(this).data("url");
             if (!url) return;
-
+            //ADD LOBBIE TRANSITION
             $("body").addClass("fade-out");
 
             setTimeout(function() {
@@ -43,22 +46,18 @@ $(document).ready(function() {
     });
 
     //=====================moving from html to html===================
-    //elevator button --> floor 1
-    $(".testbutton1").click(function() {
-        $(".testground").hide();
-        $(".testfloor1").show();
-    });
-
-    //elevator button --> floor 2
-    $(".testbutton2").click(function() {
-        $(".testground").hide();
-        $(".testfloor2").show();
-    });
-
+    
+    //in different js,
+    
+    
+    
+    
+    
+    /*
     //back to elevator
     $(".backtoelevator").click(function() {
         $(".container").show();
-        $(".title").hide();//find out how to current floor on page hide
+        $(".title").hide();
         
         //door close sfx
         closeSound.currentTime = 0;
@@ -67,11 +66,15 @@ $(document).ready(function() {
         closeSound.play().catch(function (err) {
             console.log("AUDIO ERROR:", err);
         });
+        
+        //fade-out effect
+        $("body").addClass("fade-out");
+
+        //wait 1.5 sec, then go to index.html
+        setTimeout(function() {
+        window.location.href = "index.html";
+        }, 1500);
 
     });
-
-document.addEventListener('click', function () {
-    audio.muted = false;
-}, { once: true });
-
+    */
 });
