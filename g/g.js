@@ -21,9 +21,17 @@ $("body").append("<img width=200 src='hell.png'>");
 $("body").append("<img width=400 src='trolleyProblem.png'>");
    }
 
+
+
  $("#hell").click(function(){
     $("#hell").html ("Whoops! Wrong button :)" );
 makeImage ("hell");
+
+    var angle = 0;
+        $("hell").click(function() {
+         angle +90;
+         $("hell").rotate(angle);
+});    
 
  makeButton("Here, click this one instead!");
   function makeButton (trolleyProblem) {
