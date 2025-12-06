@@ -1,13 +1,18 @@
 
-// Get references to the button and the text element
 const myButton = document.getElementById('hell');
 const hiddenButton = document.getElementById('hiddenButton');
 
-// Add a click event listener to the button
 hell.addEventListener('click', function() {
-    // Change the display style to make the text visible
     hiddenButton.style.display = 'block'; 
 });
+
+const myButtons = document.getElementById('trolleyProblem');
+const hiddenButtons = document.getElementById('hiddenButtons');
+
+trolleyProblem.addEventListener('click', function() {
+    hiddenButtons.style.display = 'block'; 
+});
+
 
 function makeImage (imageName) {
 $("body").append("<img width=200 src='hell.png'>");
@@ -44,4 +49,15 @@ console.log("woof");
     $("body").append("<button id='lever2'>")
     $("#lever2").html(lever2);
   }
+ });
+
+ $("#lever").click(function(){
+    $("#lever").html ("Hm. You may have saved those five people, but you're still a murderer. Enjoy eternal damnnation!");
+    $("body").append("<img width=auto height=auto src='flames.png'>");
+
+ });
+ $("#lever2").click(function(){
+    $("#lever2").html ("Wow. You let all those people die just so you wouldn't have to be responsible for killing just one. Enjoy eternal damnnation!");
+    $("body").append("<img width=auto height=auto src='flames.png'>");
+
  });
