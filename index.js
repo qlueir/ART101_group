@@ -2,12 +2,10 @@ $(document).ready(function() {
 
     //variables
     let ding = new Audio ('image/ding.mp3')
-    let elevator = new Audio ('ADD SOME ELEVATOR MUSIC.mp3')
     var audio = document.getElementById('background-audio');
 
     //elevator music
 
-    elevator.loop = true
     audio.volume = 0.3;
     audio.loop = true;
     audio.play();
