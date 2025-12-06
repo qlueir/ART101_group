@@ -1,0 +1,20 @@
+.backtoelevator button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    opacity: 1;
+    transition: opacity 1.5s ease;
+}
+
+body.fade-out {
+    opacity: 0;
+}

@@ -9,10 +9,12 @@ body {
 }
 
 .container {
+  display: none;
   position: relative;
   width: fit-content;
   margin: 0 auto;
 }
+
 .container img {
   height: auto;
   width: 100%;
@@ -56,6 +58,35 @@ button:hover {
   display: none;
 }
 
-/*testing div floor*/
-.testfloor1{ display:none;}
-.testfloor2{ display: none;}
+.page #start-button {
+    display: block;
+    bottom: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 2%;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#start-button:hover {
+    background-color: darkred;
+}
+
+.title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.page {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
