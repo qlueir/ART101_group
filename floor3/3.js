@@ -14,6 +14,12 @@ $("#creepyFace").dblclick(function() {
   $("#creepyFace").css("transform", "scale(1.2)");
 });
 
+
+exitButton.addEventListener("click", function() {
+    window.location.href = "../../index.html";
+});
+
+
 // $(document).keydown(function(event) {
 //   $("#status").text("You pressed: " + event.key);
 // });
