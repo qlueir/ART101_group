@@ -69,3 +69,8 @@ console.log("woof");
     $("body").append("<img width=auto height=auto src='flames.png'>");
 
  });
+
+
+ exitButton.addEventListener("click", function() {
+    window.location.href = "../../index.html";
+});
