@@ -22,6 +22,8 @@ $(document).ready(function() {
         $("body").removeClass("fade-out");
     });
 
+    //======================stupid many transitions====================
+    //all in one hopefully
     $(".buttons button").click(function() {
         ding.play();
         audio.pause();
@@ -29,13 +31,14 @@ $(document).ready(function() {
         let url = $(this).data("url");
         if (!url) return;
 
+        let transitionImg = $(this).data("transition");
+
+        $("#start").attr("src", transitionImg);
         $("body").addClass("fade-out");
 
         setTimeout(function() {
             window.location.href = url;
-        }, 1500);
-        //ADD LOBBIE TRANSITION
-
+        }, 2000);
     });
 
     //===================TITLE=========================
@@ -58,10 +61,14 @@ $(document).ready(function() {
         $(".title").hide();//find out how to current floor on page hide
     });
 
-    //======================stupid many transitions====================
 
-    $(".b4_button").click(function() {
-    $(".starting scene").attr("src", "image/transition_b4");
+    /* May html reference
+        $(".peeping").hover(function() {
+        $('#peephole').attr('src', 'images/cat_point5.jpg');
+        yippee.play();
+    }, function() {
+        $('#peephole').attr('src', 'images/peephole.webp');
     });
+    */
 
 });

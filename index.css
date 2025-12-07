@@ -13,15 +13,19 @@ body {
   position: relative;
   width: fit-content;
   margin: 0 auto;
-}
-
-.container img {
-  height: auto;
-  width: 100%;
   max-width: 700px;
 }
 
+/*animation reference: https://www.w3schools.com/css/css3_animations.asp*/
+
+.container #start {
+  z-index: 1;
+  height: auto;
+  width: 100%;
+}
+
 .container .buttons {
+  z-index: 2;
   position:absolute;
   top: 35%;
   left: 72%;
@@ -49,7 +53,7 @@ button:hover {
   background-color: white;
 }
 
-.transition{
+#hidden_images{
   display: none;
 }
 
