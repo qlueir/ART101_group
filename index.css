@@ -33,11 +33,6 @@ body {
   text-align: center;
 }
 
-.arrow{
-  position: absolute;
-  box-shadow: 0 5px black;
-  padding: 10px;
-}
 
 button {
   background-color: rgb(140, 106, 106);
@@ -54,7 +49,7 @@ button:hover {
   background-color: white;
 }
 
-.noarrowtransition{
+.transition{
   display: none;
 }
 

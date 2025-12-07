@@ -1,11 +1,12 @@
 $(document).ready(function() {
 
-    //variables
-    let ding = new Audio ('image/ding.mp3')
-    var audio = document.getElementById('background-audio');
+    //array 
+    var floor_visited = [false, false]
+    
+    
 
     //elevator music
-
+    var audio = document.getElementById('background-audio');
     audio.volume = 0.3;
     audio.loop = true;
     audio.play();
@@ -14,6 +15,7 @@ $(document).ready(function() {
     }, { once: true });
 
     //ding transition
+    let ding = new Audio ('image/ding.mp3')
     $(window).on("pageshow", function() {
         $("body").removeClass("fade-out");
     });
@@ -24,6 +26,12 @@ $(document).ready(function() {
 
         let url = $(this).data("url");
         if (!url) return;
+
+        $("body").addClass("fade-out");
+
+        setTimeout(function() {
+            window.location.href = url;
+        }, 1500);
         //ADD LOBBIE TRANSITION
 
     });
@@ -42,8 +50,11 @@ $(document).ready(function() {
     
     //in different js,
     
-    
-    
+        //back to elevator
+    $(".backtoelevator").click(function() {
+        $(".container").show();
+        $(".title").hide();//find out how to current floor on page hide
+    });
     
     
     /*
