@@ -47,7 +47,7 @@ body {  background-image: url("images/b4 pt1.jpg");
 
 }
 
-#exitpurgatory {
+#exitButton{
     position: absolute;
     top: 10px;
     right: 40px;

@@ -12,11 +12,9 @@ $(document).ready(function () {
     $("#cube").fadeIn(500);
     });
 
-var exitButton = document.getElementById("exitpurgatory");
-
-exitButton.addEventListener("click", function() {
-    window.location.href = "../../index.html";});
-
+ exitButton.addEventListener("click", function() {
+    window.location.href = "../../index.html";
+});
   
 //var roller = getRandomNumber(1, 6);
 function rollDice(roll_value) {
