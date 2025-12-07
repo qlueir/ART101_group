@@ -15,22 +15,18 @@ $(document).ready(function() {
 
     //ding transition
     $(window).on("pageshow", function() {
-            $("body").removeClass("fade-out");
-        });
+        $("body").removeClass("fade-out");
+    });
 
-        $(".buttons button").click(function() {
-            ding.play();
-            elevator.pause();
+    $(".buttons button").click(function() {
+        ding.play();
+        audio.pause();
 
-            let url = $(this).data("url");
-            if (!url) return;
-            //ADD LOBBIE TRANSITION
-            $("body").addClass("fade-out");
+        let url = $(this).data("url");
+        if (!url) return;
+        //ADD LOBBIE TRANSITION
 
-            setTimeout(function() {
-             window.location.href = url;
-            }, 1500);
-        });
+    });
 
     //===================TITLE=========================
     let closeSound = document.getElementById("close-sound");
@@ -40,7 +36,6 @@ $(document).ready(function() {
 
         $(".title").hide();
         $(".container").show();
-
     });
 
     //=====================moving from html to html===================
