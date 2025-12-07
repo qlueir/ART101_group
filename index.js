@@ -2,6 +2,8 @@ $(document).ready(function() {
 
     //array 
     var floor_visited = [false, false]
+    //index.html/ a floor visited = permantently delete .title div
+    
     
     
 
@@ -55,30 +57,11 @@ $(document).ready(function() {
         $(".container").show();
         $(".title").hide();//find out how to current floor on page hide
     });
-    
-    
-    /*
-    //back to elevator
-    $(".backtoelevator").click(function() {
-        $(".container").show();
-        $(".title").hide();
-        
-        //door close sfx
-        closeSound.currentTime = 0;
-        closeSound.volume = 1;
 
-        closeSound.play().catch(function (err) {
-            console.log("AUDIO ERROR:", err);
-        });
-        
-        //fade-out effect
-        $("body").addClass("fade-out");
+    //======================stupid many transitions====================
 
-        //wait 1.5 sec, then go to index.html
-        setTimeout(function() {
-        window.location.href = "index.html";
-        }, 1500);
-
+    $(".b4_button").click(function() {
+    $(".starting scene").attr("src", "image/transition_b4");
     });
-    */
+
 });
