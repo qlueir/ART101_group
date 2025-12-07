@@ -15,8 +15,7 @@ $(document).ready(function () {
 var exitButton = document.getElementById("exitpurgatory");
 
 exitButton.addEventListener("click", function() {
-    window.location.href = "../../index.html";
-});
+    window.location.href = "../../index.html";});
 
   
 //var roller = getRandomNumber(1, 6);
