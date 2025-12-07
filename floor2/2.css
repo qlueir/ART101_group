@@ -35,12 +35,12 @@ p {
 }
 
 .buttons-floor2 {
-    position: center;
-    align-content:center;
-    text-align: center;
+    display: flex;           
+    justify-content: center; 
+    gap: 20px;               
+    margin-top: 20px;
     font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- 
 }
 
 #yes {

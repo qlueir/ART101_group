@@ -13,15 +13,19 @@ body {
   position: relative;
   width: fit-content;
   margin: 0 auto;
-}
-
-.container img {
-  height: auto;
-  width: 100%;
   max-width: 700px;
 }
 
+/*animation reference: https://www.w3schools.com/css/css3_animations.asp*/
+
+.container #start {
+  z-index: 1;
+  height: auto;
+  width: 100%;
+}
+
 .container .buttons {
+  z-index: 2;
   position:absolute;
   top: 35%;
   left: 72%;
@@ -33,11 +37,6 @@ body {
   text-align: center;
 }
 
-.arrow{
-  position: absolute;
-  box-shadow: 0 5px black;
-  padding: 10px;
-}
 
 button {
   background-color: rgb(140, 106, 106);
@@ -54,22 +53,23 @@ button:hover {
   background-color: white;
 }
 
-.noarrowtransition{
+#hidden_images{
   display: none;
 }
 
 .page #start-button {
-    display: block;
+    position: relative;
     bottom: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    left: 50%;
+    width: auto;     
     padding: 2%;
     font-size: 16px;
+
     background-color: black;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 8px;
 }
 #start-button:hover {
     background-color: darkred;
@@ -90,7 +90,3 @@ button:hover {
     justify-content: center;
     align-items: center;
 }
-
-/*testing div floor*/
-.testfloor1{ display:none;}
-.testfloor2{ display: none;}

@@ -1,35 +1,45 @@
 $(document).ready(function() {
 
-    //variables
-    let ding = new Audio ('image/ding.mp3')
-    let elevator = new Audio ('ADD SOME ELEVATOR MUSIC.mp3')
-    var audio = document.getElementById('background-audio');
+    //array 
+    var floor_visited = [false, false]
+    //index.html/ a floor visited = permantently delete .title div
+    
+    
+    
 
     //elevator music
-    elevator.play('ADD SOME ELEVATOR MUSIC.mp3')
-    elevator.loop = true
+    var audio = document.getElementById('background-audio');
     audio.volume = 0.3;
     audio.loop = true;
     audio.play();
+    document.addEventListener('click', function () {
+    audio.muted = false;
+    }, { once: true });
 
     //ding transition
+    let ding = new Audio ('image/ding.mp3')
     $(window).on("pageshow", function() {
-            $("body").removeClass("fade-out");
-        });
+        $("body").removeClass("fade-out");
+    });
 
-        $(".dingdong").click(function() {
-            ding.play();
-            elevator.pause();
+    //======================stupid many transitions====================
+    //all in one hopefully
+    $(".buttons button").click(function() {
+        ding.play();
+        audio.pause();
 
-            let url = $(this).data("url");
-            if (!url) return;
+        let url = $(this).data("url");
+        if (!url) return;
 
-            $("body").addClass("fade-out");
+        let transitionImg = $(this).data("transition");
 
-            setTimeout(function() {
-             window.location.href = url;
-            }, 1500);
-        });
+        $("#start").attr("src", transitionImg);
+        $("body").addClass("fade-out");
+
+        setTimeout(function() {
+            window.location.href = url;
+        }, 2000);
+    });
 
     //===================TITLE=========================
     let closeSound = document.getElementById("close-sound");
@@ -39,41 +49,26 @@ $(document).ready(function() {
 
         $(".title").hide();
         $(".container").show();
-
     });
 
     //=====================moving from html to html===================
-    //groundfloor button --> floor 1
-    $(".testbutton1").click(function() {
-        $(".testground").hide();
-        $(".testfloor1").show();
-    });
-
-    //groundfloor button --> floor 2
-    $(".testbutton2").click(function() {
-        $(".testground").hide();
-        $(".testfloor2").show();
-    });
-
-    //back to ground floor
-    $(".backtoground").click(function() {
-        $(".title").show();
-        $(".testfloor1").hide();//find out how to current floor on page hide
-
+    
+    //in different js,
+    
+        //back to elevator
+    $(".backtoelevator").click(function() {
         $(".container").show();
-        
-        //door close sfx
-        closeSound.currentTime = 0;
-        closeSound.volume = 1;
-
-        closeSound.play().catch(function (err) {
-            console.log("AUDIO ERROR:", err);
-        });
-
+        $(".title").hide();//find out how to current floor on page hide
     });
 
-document.addEventListener('click', function () {
-    audio.muted = false;
-}, { once: true });
+
+    /* May html reference
+        $(".peeping").hover(function() {
+        $('#peephole').attr('src', 'images/cat_point5.jpg');
+        yippee.play();
+    }, function() {
+        $('#peephole').attr('src', 'images/peephole.webp');
+    });
+    */
 
 });
