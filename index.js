@@ -1,10 +1,4 @@
 $(document).ready(function() {
-
-    //array 
-    var floor_visited = [false, false]
-    //index.html/ a floor visited = permantently delete .title div
-    
-    
     
 
     //elevator music
@@ -23,7 +17,7 @@ $(document).ready(function() {
     });
 
     //======================stupid many transitions====================
-    //all in one hopefully
+    
     $(".buttons button").click(function() {
         ding.play();
         audio.pause();
@@ -47,10 +41,16 @@ $(document).ready(function() {
     //click start button, sound, hide title and reveal container
     $(".start-button").on("click", function () {
 
-        $(".title").remove();//DELETE TITLE WHEN REUTNRING
+        $(".title").hide();//DELETE TITLE WHEN REUTNRING
         $(".container").show();
     });
-
+    
+    // If returning from a floor → hide title
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("fromFloor")) {
+        $(".title").hide();
+        $(".container").show();
+    }
     //=====================moving from html to html===================
     
     //in different js,
@@ -62,7 +62,7 @@ $(document).ready(function() {
     });
 
 
-    /* May html reference
+    /* May's replace image over image reference
         $(".peeping").hover(function() {
         $('#peephole').attr('src', 'images/cat_point5.jpg');
         yippee.play();
