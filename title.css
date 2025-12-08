@@ -4,8 +4,8 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    padding: 2%;
-    font-size: 16px;
+    padding: 20%;
+    font-size: 50px;
     background-color: black;
     color: white;
     border: none;
@@ -19,10 +19,12 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 70%;
+    bottom: 30%;
 }
 
 .page {
+    
     background-color: black;
     height: 100vh;
     display: flex;

@@ -5,44 +5,75 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>BASEMENT 4 "ROLL A DICE" </title>
+   <title>BASEMENT 4 "ROLL A DICE"</title>
    <link rel="stylesheet" href="b4.css">
 
    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-   <script src="b4.js" DEFER></script>
+   <script src="b4.js" defer></script>
 </head>
 
-<body>
-   <div> 
 
-    <img id="mirror" src="images/mirror.png">
+<button id=exitButton src="../index.html"> Exit </button>
 
+
+   <img id="mirror" src="images/mirror.png">
    <div id="image-container"></div>
+   <img id="arrow" src="images/arrow.png">
 
-    <img id="arrow" src="images/arrow.png" >
+ <div id="dicetext">
 
-       <audio id="music" src="images/music.mp3" autoplay loop muted></audio>
+ </div>
 
- 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
- 
-   </head>
-  <body>
-<div class="dice">
-  <div class="face one">Rebirth as a New Human</div>
-  <div class="face two">Relive the Same Life</div>
-  <div class="face three"> Heaven</div>
-  <div class="face four">Hell </div>
-  <div class="face five">Purgatory</div>
-  <div class="face six">You're born a rock</div>
-</div>
+ <div id="text"> 
 
-    
-  </body>
+   Roll the Dice to Determine Your Fate
+
+ </div> 
+
+   <audio id="music" src="images/music.mp3" autoplay loop muted></audio>
+
+// 
 
    </div>
-   
+
+      <div class="dice" id="cube" type="button">
+      <ol class="die-list even-roll" data-roll="1" id="die-1">
+        <li class="die-item" data-side="1">
+          <span class="dot"></span>
+        </li>
+        <li class="die-item" data-side="2">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </li>
+        <li class="die-item" data-side="3">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </li>
+        <li class="die-item" data-side="4">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </li>
+        <li class="die-item" data-side="5">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </li>
+        <li class="die-item" data-side="6">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </li>
+      </ol>
+    </div>
+
 
 </body>
-
 </html>

@@ -1,7 +1,7 @@
-document.getElementById('background-audio').play();
-document.getElementById('background-audio').loop = true;
-document.getElementById('background-audio').muted = false;
-document.getElementById('background-audio').volume = 0.3;
+document.getElementById('background-audio-floor2').play();
+document.getElementById('background-audio-floor2').loop = true;
+document.getElementById('background-audio-floor2').muted = false;
+document.getElementById('background-audio-floor2').volume = 0.3;
 
 var noButton = document.getElementById('no');
 
@@ -23,7 +23,7 @@ dogGif.addEventListener('click', function () {
 
 var yesButton = document.getElementById('yes');
 
-var messageBox = document.getElementById('message');
+var messageBox = document.getElementById('message-floor2');
 
 yesButton.addEventListener('click', function () {
     messageBox.textContent = "You have decided to stay... enjoy!";

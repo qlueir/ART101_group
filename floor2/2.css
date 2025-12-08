@@ -1,4 +1,4 @@
-body {background-image: url(roomfloor2.jpg);
+.body-floor2 {background-image: url(roomfloor2.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
@@ -34,13 +34,13 @@ p {
     color: black;
 }
 
-.buttons {
-    position: center;
-    align-content:center;
-    text-align: center;
+.buttons-floor2 {
+    display: flex;           
+    justify-content: center; 
+    gap: 20px;               
+    margin-top: 20px;
     font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- 
 }
 
 #yes {
@@ -59,7 +59,7 @@ p {
 
 }
 
-#message {
+#message-floor2 {
     text-align: center;
     font-size: 35px;
     color: darkblue;

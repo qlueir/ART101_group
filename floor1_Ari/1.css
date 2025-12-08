@@ -1,7 +1,20 @@
-body {background-image: url(Floor1Aquarium.gif);
-background-repeat: no-repeat;
-background-size: cover;
-background-attachment: fixed;
+/* body {
+background-image: url(Floor1Aquarium.gif); 
+background-repeat: repeat-y; 
+background-size: cover;  background-attachment: fixed;
+} */
+
+Body {background-color:black;} 
+
+.container {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+.container img {
+  height: auto;
+  width: 100%;
+  max-width: 700px;
 }
 
 p {text-align: center;
@@ -24,4 +37,18 @@ font-family: 'Georgia'
 #no {background-color: lightblue;
 font-size: 30px;
 font-family: 'Georgia'
+}
+
+#dialogue-box {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    padding: 20px;
+    background: rgb(15, 0, 0);
+    color: white;
+    font-size: 30px;
+    min-height: 55px;
+    cursor: pointer; 
 }
