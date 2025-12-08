@@ -47,7 +47,7 @@ $(document).ready(function() {
     //click start button, sound, hide title and reveal container
     $(".start-button").on("click", function () {
 
-        $(".title").hide();
+        $(".title").remove();//DELETE TITLE WHEN REUTNRING
         $(".container").show();
     });
 

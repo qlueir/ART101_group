@@ -78,5 +78,5 @@ dialogueBox.addEventListener("click", nextLine);
 var exitButton = document.getElementById("exit-button-parking");
 
 exitButton.addEventListener("click", function() {
-    window.location.href = "../../index.html";
+    window.location.href = "../index.html";
 });
