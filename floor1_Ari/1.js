@@ -40,3 +40,10 @@ nextLine();
 
 dialogueBox.addEventListener("click", nextLine);
 
+//exit button
+var exitButton = document.getElementsByClassName("backtoelevator");
+
+exitButton.addEventListener("click", function() {
+    window.location.href = "../index.html";
+});
+
