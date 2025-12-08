@@ -1,7 +1,17 @@
-div {
-    text-align: center;       /* centers inline elements like text + buttons */
-    margin-top: 100px;        /* optional spacing */
+body {
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;  /* vertical center */
+    align-items: center;      /* horizontal center */
+    height: 100vh;            /* makes the body fill the screen */
+    margin: 0;
 }
-  body {
-    background-color: greenyellow;   /* change to any color */
+
+h1, h2 {
+    text-align: center;
+}
+
+#image {
+    transition: transform 1s;
 }
