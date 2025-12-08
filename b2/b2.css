@@ -2,4 +2,6 @@ div {
     text-align: center;       /* centers inline elements like text + buttons */
     margin-top: 100px;        /* optional spacing */
 }
-  
+  body {
+    background-color: greenyellow;   /* change to any color */
+}
