@@ -4,6 +4,6 @@ $(document).ready(function() {
 var exitButton = document.getElementById("exit-button");
 
 exitButton.addEventListener("click", function() {
-    window.location.href = "../index.html?fromFloor=1";
+    window.location.href = "index.html?fromFloor=1";
 });
 });
