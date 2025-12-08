@@ -44,6 +44,6 @@ dialogueBox.addEventListener("click", nextLine);
 var exitButton = document.getElementsByClassName("backtoelevator");
 
 exitButton.addEventListener("click", function() {
-    window.location.href = "../index.html";
+    window.location.href = "../index.html?fromFloor=1";
 });
 
