@@ -1,3 +1,10 @@
+let audio = document.getElementById('Sprunki');
+audio.loop = true;
+audio.muted = false;
+audio.play();
+audio.volume = 0.3;
+
+
 $("#creepyFace").click(function() {
   $("#status").text("AAAAAAAAAAAAAAAAÆÆÆÆÆÆÆÆÆÆÆ");
   $("body").css("background", "red");
