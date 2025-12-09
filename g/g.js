@@ -1,77 +1,54 @@
 $(document).ready(function() {
-    //play calm soundtrack
-    
-    //if click #click4heaven button
-    $("#click4heaven").click(function(){
-        //hide intro
-        //show hell
-        
+    $(".hell").hide();
+    $(".trolley").hide();
+
+    $("#heaven-doorknob").click(function(){
         $(".intro").hide();
+        $("body").css("background-color", "black");
         $(".hell").show();
+    });
+        //replace door img with flames
 
-        //pause calm soundtrack
-    
-    
-    
-    //================FAKE HEAVEN (HELL)=========================
-
-    //"oh no! sorry wrong button" dialog click
-        //hide hell
-        //show 
-
-
+    $(".click-this-instead").click(function() {
+        $(".hell").hide();
+        $(".trolley").show();
+    });
     //==================TROLLEY PROBLEM=======================
 
-    //trolleyproblem 
-    $("#trolleyProblem").html ("Wuh oh, looks like you have a dillemma! Will you pull the lever to save the five people but sacrifice one?");
-        //if do nothing, say html
-        //else pell-lever, say html
-        //play laugh sfx
-        //force send to endingscreen.html
-    const myButtons = document.getElementById('trolleyProblem');
-    const hiddenButtons = document.getElementById('hiddenButtons');
-
-
+    //variables
+    let laugh = new Audio('laugh.mp3')
+    let wompwomp = new Audio('wompwomp.mp3')
     
-
-    makeButton("Here, click this one instead!");
-    function makeButton (trolleyProblem) {
-        $("body").append("<button id='trolleyProblem'>")
-        $("#trolleyProblem").html(trolleyProblem);
-    }
+    //trolleyproblem choice
+    $(".pull-lever").click(function() {
+        laugh.play();
+        wompwomp.play();
+        $(".do-nothing").hide();
+        $(".pull-lever").hide();
+        $("#trolley").attr("src", "flames.png");
+        $("body").css("background-color", "black");
+        $(".annoying").html ("Hm. Sure you've saved 5 people but murder is still murder. Enjoy eternal damnnation!");
+        setTimeout(function() {
+            window.location.href = "../endingscreen.html";
+        }, 7000);
     });
 
-    //================CHOICE===================
-    $("#trolleyProblem").html ("Wuh oh, looks like you have a dillemma! Will you pull the lever to save the five people but sacrifice one?");
-        makeImage2("trolleyProblem");
-        console.log("woof");
-
-        makeButton2 ("Pull Lever");
-        function makeButton2 (lever) {
-        $("body").append("<button id='lever'>")
-        $("#lever").html(lever);
-        }
-        makeButton3 ("Do Nothing");
-        function makeButton3 (lever2) {
-        $("body").append("<button id='lever2'>")
-        $("#lever2").html(lever2);
-        }
+     $(".do-nothing").click(function() {
+        laugh.play();
+        wompwomp.play();
+        $(".do-nothing").hide();
+        $(".pull-lever").hide();
+        $("#trolley").attr("src", "flames.png");
+        $("body").css("background-color", "black");
+        $(".annoying").html ("Wow. You let all those people die just so you wouldn't have to be responsible for killing just one. Enjoy eternal damnnation!");
+        setTimeout(function() {
+            window.location.href = "../endingscreen.html";
+        }, 7000);
     });
-
-    $("#lever").click(function(){
-        $("#lever").html ("Hm. You may have saved those five people, but you're still a murderer. Enjoy eternal damnnation!");
-        $("body").append("<img width=auto height=auto src='flames.png'>");
-
-    });
-    $("#lever2").click(function(){
-        $("#lever2").html ("Wow. You let all those people die just so you wouldn't have to be responsible for killing just one. Enjoy eternal damnnation!");
-        $("body").append("<img width=auto height=auto src='flames.png'>");
-
-    });
-
-
+    
     var exitButton = document.getElementById("backtoelevator");
 
     exitButton.addEventListener("click", function() {
         window.location.href = "../index.html?fromFloor=1";
     });
+});

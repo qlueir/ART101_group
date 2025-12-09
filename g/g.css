@@ -1,30 +1,57 @@
-body {background-color:rgb(0, 0, 0);}
+body {background-color:rgb(255, 255, 255);}
+.annoying {color: white;}
+.intro{
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 700px;
+}
 
-#hiddenButton {
+#heaven-door {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+#heaven-doorknob{
+    background-color: rgb(228, 187, 116);
+    border-color: rgb(178, 135, 35);
+    cursor: pointer;
+  position:absolute;
+  top: 46%;
+  left: 75%;
+  color: rgb(238, 228, 163);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 19px;
+  padding: 10px 10px;
+  text-align: center;
+}
+
+#heaven-doorknob:hover{
+    background-color: rgb(163, 125, 60);
+    border-color: rgb(178, 135, 35);
+}
+
+#pre-hell {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+#hell {
     display: none;
 }
-   
-#hiddenButtons {
-    display: none;
-}
-.hell {
-    display: none;
-    background-image:url("flames.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
+
+#trolley{
     width: 700px;
     height: auto;
 }
 
-.trolley{
-    display: none;
-    background-image:url("trolleyproblem.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 700px;
-    height: auto;
-}
-.backtoelevator {
+#backtoelevator {
+    z-index: 2;
     position: absolute;
     top: 20px;
     right: 20px;
