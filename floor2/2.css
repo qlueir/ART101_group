@@ -4,7 +4,7 @@
 p {
     text-align: center;
     font-size: 40px;
-    color: black;
+    color: white;
 }
 
 .buttons-floor2 {
@@ -35,7 +35,7 @@ p {
 #message-floor2 {
     text-align: center;
     font-size: 35px;
-    color: darkblue;
+    color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -54,7 +54,7 @@ p {
   position: relative;
   width: fit-content;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 800px;
 }
 .room2 {
   z-index: 1;
