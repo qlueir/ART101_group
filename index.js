@@ -40,8 +40,7 @@ $(document).ready(function() {
 
     //click start button, sound, hide title and reveal container
     $(".start-button").on("click", function () {
-
-        $(".title").hide();//DELETE TITLE WHEN REUTNRING
+        $(".title").hide();
         $(".container").show();
     });
     
@@ -51,16 +50,6 @@ $(document).ready(function() {
         $(".title").hide();
         $(".container").show();
     }
-    //=====================moving from html to html===================
-    
-    //in different js,
-    
-        //back to elevator
-    $(".backtoelevator").click(function() {
-        $(".container").show();
-        $(".title").hide();//find out how to current floor on page hide
-    });
-
 
     /* May's replace image over image reference
         $(".peeping").hover(function() {
