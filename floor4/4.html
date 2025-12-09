@@ -1,21 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Slug Floor</title>
+  <style>
+    body {
+      background-image: url("images/forest_background.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
 
-   <title>FLOOR 4</title>
-   <link rel="stylesheet" href="4.css">
+    .slug-container {
+      position: relative;
+      height: 400px;
+    }
 
-   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-   <script src="4.js" DEFER></script>
+    #slug {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) scale(1);
+      width: 150px;
+      transition: transform 1.5s ease-in-out;
+      cursor: pointer;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
-
 <body>
-   <div> something</div>
-   
+  <h1>Is This Your Floor?</h1>
 
+  <div class="slug-container">
+    <img id="slug" src="images/sammy.webp" alt="A slug" />
+  </div>
+
+  <div class="buttons">
+    <button id="back">Return to elevator</button>
+  </div>
+
+  <!-- scary sound -->
+  <audio id="scary-sound" src="sounds/scary.mp3"></audio>
+
+  <script>
+    const slug = document.getElementById("slug");
+    const sound = document.getElementById("scary-sound");
+    const backBtn = document.getElementById("back");
+
+    let scale = 1;
+
+    slug.addEventListener("click", () => {
+      scale += 0.3; // grow bigger each click
+      slug.style.transform = `translateX(-50%) scale(${scale})`;
+      sound.play();
+    });
+
+    backBtn.addEventListener("click", () => {
+      window.location.href = "../index.html"; // back to elevator hub
+    });
+  </script>
 </body>
-
 </html>
