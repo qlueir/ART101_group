@@ -13,16 +13,35 @@
 </head>
 
 <body>
-   <p>IS THIS YOUR FLOOR?</p>
-   <button id = "start">YES</button>
-   <button id = "no"><a href="../index.html">NO</a></button>
+   <div id = "choice">
+      <p>IS THIS YOUR FLOOR?</p>
+      <button id = "yes">YES</button>
+      <button id = "no" onclick="location.href = '../index.html'">NO</button>
+   </div>
    <br>
    <div id = "directions" style = "display: none">
    <button class = "direction-button" id = "north">north</button>
    <button class = "direction-button" id = "west">west</button>
    <button class = "direction-button" id = "east">east</button>
    <button class = "direction-button" id = "south">south</button>
+   <button id = 'test'>a button that tests the save function</button>
+   <button id = 'marker-button'>place marker</button>
    </div>
+   <div id = "marker-select" style = "display: none">do you want to place a marker?
+      <br>
+      <select name = "direction-selection" id = "direction-selection">
+         <option value = "north">north</option>
+         <option value = "west">west</option>
+         <option value = "east">east</option>
+         <option value = "south">south</option>
+      </select>
+      <div id = "select-submit" style = "display: flex">
+         <button id = "submit">submit</button>
+         <button id = "erase">clear marker</button>
+         <button id = "cancel">cancel</button>
+      </div>
+   </div>
+   <div class = 'overlay'>you died...</div>
    
 </body>
 
