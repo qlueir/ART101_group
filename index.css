@@ -40,7 +40,7 @@ body {
 
 button {
   background-color: rgb(140, 106, 106);
-  font-size: 10px;
+  font-size: 20px;
   position: absolute;
   border: 5px black;
   box-shadow: 0 5px black;
@@ -63,7 +63,7 @@ button:hover {
     left: 50%;
     width: auto;     
     padding: 2%;
-    font-size: 16px;
+    font-size: 20px;
 
     background-color: black;
     color: white;
@@ -79,7 +79,7 @@ button:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 80%;
     text-align: center;
 }
 
