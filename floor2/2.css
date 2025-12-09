@@ -1,31 +1,4 @@
-.body-floor2 {background-image: url(roomfloor2.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-background-attachment: fixed;
-}
-
-.dogpic {
-      position: absolute;
-    top: 55%;
-    left: 17%;
-    width: 35%;
-    height: auto;
-}
-
-.ball {
-    position: absolute;
-    top: 85%;
-    left: 55%;
-    width: 7%;
-    height: auto;
-}
-.room2 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    visibility: hidden;
+.body-floor2 {background-color: black;
 }
 
 p {
@@ -77,7 +50,32 @@ p {
     transform: scale(1);
 }
 
-.container {
-display: flex;
-flex-wrap: nowrap;
+.container { 
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 700px;
+}
+.room2 {
+  z-index: 1;
+  height: auto;
+  width: 100%;
+}
+
+.dogpic {
+    position: absolute;
+    z-index: 2;
+    top: 55%;
+    left: 17%;
+    width: 35%;
+    height: auto;
+}
+
+.ball {
+    position: absolute;
+    z-index: 2;
+    top: 85%;
+    left: 55%;
+    width: 7%;
+    height: auto;
 }

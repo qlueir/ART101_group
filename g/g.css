@@ -1,1 +1,37 @@
-body {background-color:azure;}
+body {background-color:rgb(0, 0, 0);}
+
+#hiddenButton {
+    display: none;
+}
+   
+#hiddenButtons {
+    display: none;
+}
+.hell {
+    display: none;
+    background-image:url("flames.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 700px;
+    height: auto;
+}
+
+.trolley{
+    display: none;
+    background-image:url("trolleyproblem.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 700px;
+    height: auto;
+}
+.backtoelevator {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
