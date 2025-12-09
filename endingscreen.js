@@ -1,6 +1,9 @@
+$(document).ready(function() {
 
-var exitButton = document.getElementById("exit-button");
 
-exitButton.addEventListener("click", function() {
-    window.location.href = "../../index.html";
+    var exitButton = document.getElementById("exit-button");
+
+    exitButton.addEventListener("click", function() {
+        window.location.href = "index.html";
+    });
 });

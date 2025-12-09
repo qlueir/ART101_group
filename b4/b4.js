@@ -13,7 +13,7 @@ $(document).ready(function () {
     });
 
  exitButton.addEventListener("click", function() {
-    window.location.href = "../../index.html";
+    window.location.href = "../index.html?fromFloor=1";
 });
   
 //var roller = getRandomNumber(1, 6);

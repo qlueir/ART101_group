@@ -6,7 +6,7 @@ document.getElementById('background-audio-floor2').volume = 0.3;
 var noButton = document.getElementById('no');
 
 noButton.addEventListener('click', function () {
-    window.location.href = '../index.html';
+    window.location.href = '../index.html?fromFloor=1';
 });
 
 var dogGif = document.getElementById('dogfloor2gif');

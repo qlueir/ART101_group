@@ -21,9 +21,10 @@ $("#creepyFace").dblclick(function() {
   $("#creepyFace").css("transform", "scale(1.2)");
 });
 
+var exitButton = document.getElementById("exitButton");
 
 exitButton.addEventListener("click", function() {
-    window.location.href = "../../index.html";
+    window.location.href = "../index.html?fromFloor";
 });
 
 

@@ -71,6 +71,8 @@ console.log("woof");
  });
 
 
- exitButton.addEventListener("click", function() {
-    window.location.href = "../../index.html";
+var exitButton = document.getElementById("backtoelevator");
+
+exitButton.addEventListener("click", function() {
+    window.location.href = "../index.html?fromFloor=1";
 });
