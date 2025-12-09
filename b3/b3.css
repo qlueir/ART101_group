@@ -1,0 +1,32 @@
+body {
+    background-image: url("backrooms.png");
+    background-size: 1700px;
+    background-attachment: scroll;
+}
+
+h1{
+    background-color: antiquewhite;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;
+    max-width: max-content;
+    margin: auto;
+}
+#b3-buttons{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+div button {
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 200px;
+    border-color: black;
+    border-radius: 5px;
+}
+#man {
+    position: absolute;
+    width: 1000px;
+    top: -1000px;
+    left: 300px;
+    z-index: 2;
+}
