@@ -1,4 +1,13 @@
-let mazeArray = [];
+$('#yes').click(function(){
+    let image = $('#man')
+    image.animate({marginTop: '+=1000px'}, "fast");
+    setTimeout(transitionToIndex, 500)
+})
+
+function transitionToIndex(){
+    location.href = "../index.html"
+}
+/*let mazeArray = [];
 const mazeImages = [];
 
 //maze data converted into cells, const
@@ -221,7 +230,7 @@ function updatePosition(direction){
         displacement = 1;
     } else if (displacement === "south"){
         displacement = 5;
-    }*/
+    }
 
     let index = searchArray(gameState.position) + displacement;
 
@@ -294,4 +303,4 @@ $('#test').click(function(){
     saveMazeState(gameState.current);
     debugger;
     randomMaze();
-})
+})*/
