@@ -15,5 +15,5 @@ slug.addEventListener("click", () => {
 });
 
 backBtn.addEventListener("click", () => {
-  window.location.href = "../index.html"; // back to elevator hub
+  window.location.href = "../index.html?fromFloor=1"; // back to elevator hub
 });

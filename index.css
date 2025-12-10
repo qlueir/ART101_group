@@ -40,7 +40,7 @@ body {
 
 button {
   background-color: rgb(140, 106, 106);
-  font-size: 20px;
+  font-size: 10px;
   position: absolute;
   border: 5px black;
   box-shadow: 0 5px black;
